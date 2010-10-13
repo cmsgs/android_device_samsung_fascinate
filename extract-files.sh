@@ -116,7 +116,7 @@ done
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libclientgps.so:obj/lib/libgps.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so 
 
@@ -147,7 +147,7 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/lights.default.so:system/lib/hw/lights.default.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/sensors.SGH-T959.so:system/lib/hw/sensors.SCH-I500.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/hw/sensors.SCH-I500.so:system/lib/hw/sensors.SCH-I500.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/gralloc.s5pc110.so:system/lib/hw/gralloc.s5pc110.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsensor_yamaha.so:system/lib/libsensor_yamaha.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsensor_yamaha_test.so:system/lib/libsensor_yamaha_test.so \\
@@ -178,7 +178,7 @@ PRODUCT_COPY_FILES += \\
 # GPS
 #
 PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libclientgps.so:system/lib/libgps.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:system/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:system/lib/libsecgps.so
 
 #
