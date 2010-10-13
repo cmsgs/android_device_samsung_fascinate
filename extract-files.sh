@@ -33,6 +33,9 @@ FILES="
 bin/drexe
 bin/rilclient-test
 bin/wlservice
+bin/sensorcalibutil_yamaha
+bin/sensorserver_yamaha
+bin/sensorstatutil_yamaha
 
 etc/asound.conf
 etc/wifi/nvram_net.txt
@@ -82,6 +85,8 @@ lib/egl/libGLES_android.so
 lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so
 lib/egl/libGLESv2_POWERVR_SGX540_120.so
 
+lib/libsensor_yamaha.so
+lib/libsensor_yamaha_test.so
 lib/hw/copybit.s5pc110.so
 lib/hw/lights.default.so
 lib/hw/sensors.SCH-I500.so
@@ -143,8 +148,12 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/lights.default.so:system/lib/hw/lights.default.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/sensors.SGH-T959.so:system/lib/hw/sensors.SCH-I500.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/gralloc.s5pc110.so:system/lib/hw/gralloc.s5pc110.so
-
+    vendor/samsung/__DEVICE__/proprietary/lib/hw/gralloc.s5pc110.so:system/lib/hw/gralloc.s5pc110.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsensor_yamaha.so:system/lib/libsensor_yamaha.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsensor_yamaha_test.so:system/lib/libsensor_yamaha_test.so \\
+    vendor/samsung/__DEVICE__/proprietary/bin/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \\
+    vendor/samsung/__DEVICE__/proprietary/bin/sensorserver_yamaha:system/bin/sensorserver_yamaha \\
+    vendor/samsung/__DEVICE__/proprietary/bin/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
 #
 # Camera
 #
