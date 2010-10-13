@@ -22,14 +22,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+# $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/init.smdkc110.rc:root/init.smdkc110.rc
+    device/samsung/fascinate/init.smdkc110.rc:root/init.smdkc110.rc
 
 ## (2) Also get non-open-source GSM-specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/SGH-T959/SGH-T959-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/SCH-I500/SCH-I500-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -48,13 +48,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Vibrant uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/SGH-T959/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/fascinate/overlay
 
 # media profiles and capabilities spec
-$(call inherit-product, device/samsung/SGH-T959/media_a1026.mk)
+$(call inherit-product, device/samsung/fascinate/media_a1026.mk)
 # media config xml file
 PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/media_profiles.xml:system/etc/media_profiles.xml
+    device/samsung/fascinate/media_profiles.xml:system/etc/media_profiles.xml
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
@@ -69,23 +69,24 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout / Keychars
 PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
-    device/samsung/SGH-T959/prebuilt/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-    device/samsung/SGH-T959/prebuilt/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    device/samsung/SGH-T959/prebuilt/keylayout/melfas-touchkey.kl:system/usr/keylayout/melfas-touchkey.kl \
-    device/samsung/SGH-T959/prebuilt/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/samsung/SGH-T959/prebuilt/keychars/s3c-keypad.kcm.bin:system/usr/keychars/s3c-keypad.kcm.bin \
-    device/samsung/SGH-T959/prebuilt/keychars/sec_jack.kcm.bin:system/usr/keychars/sec_jack.kcm.bin \
-    device/samsung/SGH-T959/prebuilt/keychars/melfas-touchkey.kcm.bin:system/usr/keychars/melfas-touchkey.kcm.bin \
-    device/samsung/SGH-T959/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-    device/samsung/SGH-T959/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
+    device/samsung/fascinate/prebuilt/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
+    device/samsung/fascinate/prebuilt/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
+    device/samsung/fascinate/prebuilt/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/samsung/fascinate/prebuilt/keylayout/melfas-touchkey.kl:system/usr/keylayout/melfas-touchkey.kl \
+    device/samsung/fascinate/prebuilt/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/samsung/fascinate/prebuilt/keychars/s3c-keypad.kcm.bin:system/usr/keychars/s3c-keypad.kcm.bin \
+    device/samsung/fascinate/prebuilt/keychars/sec_jack.kcm.bin:system/usr/keychars/sec_jack.kcm.bin \
+    device/samsung/fascinate/prebuilt/keychars/melfas-touchkey.kcm.bin:system/usr/keychars/melfas-touchkey.kcm.bin \
+    device/samsung/fascinate/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/samsung/fascinate/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
 PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/vold.fstab:system/etc/vold.fstab 
+    device/samsung/fascinate/prebuilt/vold:system/bin/vold \
+    device/samsung/fascinate/prebuilt/vold.conf:system/etc/vold.conf 
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/samsung/SGH-T959/kernel
+LOCAL_KERNEL := device/samsung/fascinate/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -97,8 +98,8 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, build/target/product/full.mk)
 
 
-PRODUCT_NAME := full_vibrant
-PRODUCT_DEVICE := SGH-T959
-PRODUCT_MODEL := Vibrant
+PRODUCT_NAME := full_fascinate
+PRODUCT_DEVICE := SCH-I500
+PRODUCT_MODEL := Fascinate
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung

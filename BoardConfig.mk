@@ -24,13 +24,13 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/SGH-T959/BoardConfigVendor.mk
+-include vendor/samsung/SCH-I500/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 #TARGET_NO_RECOVERY := true
 #TARGET_NO_KERNEL := true
 
-TARGET_BOARD := SGH-T959
+TARGET_BOARD := SCH-I500
 TARGET_BOARD_PLATFORM := s5pc110
 TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
 
@@ -61,7 +61,7 @@ BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
 
-BOARD_EGL_CFG := device/samsung/SGH-T959/prebuilt/egl.cfg
+BOARD_EGL_CFG := device/samsung/fascinate/prebuilt/egl.cfg
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x02e00000
@@ -79,7 +79,7 @@ BOARD_USES_FFORMAT := true
 BOARD_RECOVERY_IGNORE_BOOTABLES := true
 
 BOARD_BOOT_DEVICE := /dev/block/bml7
-BOARD_DATA_DEVICE := /dev/block/mmcblk0p2
+BOARD_DATA_DEVICE := /dev/block/mmcblk0p1
 BOARD_DATA_FILESYSTEM := auto
 BOARD_DATA_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
 BOARD_HAS_DATADATA := true
@@ -97,4 +97,4 @@ BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 #BOARD_USES_BMLUTILS := true
 
-TARGET_PREBUILT_KERNEL := device/samsung/SGH-T959/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/fascinate/kernel
