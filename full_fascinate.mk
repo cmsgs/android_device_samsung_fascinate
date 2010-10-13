@@ -34,7 +34,7 @@ $(call inherit-product-if-exists, vendor/samsung/SCH-I500/SCH-I500-vendor.mk)
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
-    rild.libpath=/system/lib/libreference-ril.so \
+    rild.libpath=/system/lib/libsec-ril40.so \
     rild.libargs=-d /dev/ttyS0 \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
