@@ -130,6 +130,7 @@ PRODUCT_COPY_FILES := \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so 
 
 # ppp
+PRODUCT_COPY_FILES := \\
     vendor/samsung/__DEVICE__/proprietary/bin/pppd:system/bin/pppd \\
     vendor/samsung/__DEVICE__/proprietary/bin/pppd_runner:system/bin/pppd_runner \\
     vendor/samsung/__DEVICE__/proprietary/etc/ppp/chap-secrets:system/etc/ppp/chap-secrets \\
