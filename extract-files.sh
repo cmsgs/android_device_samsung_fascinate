@@ -31,6 +31,8 @@ done
 
 FILES="
 bin/drexe
+bin/pppd
+bin/pppd_runner
 bin/rilclient-test
 bin/rild
 bin/wlservice
@@ -39,6 +41,12 @@ bin/sensorserver_yamaha
 bin/sensorstatutil_yamaha
 
 etc/asound.conf
+etc/ppp/chap-secrets
+etc/ppp/ip-down
+etc/ppp/ip-up
+etc/ppp/ip-up-vpn
+etc/ppp/options
+etc/ppp/pap-secrets
 etc/wifi/nvram_net.txt
 etc/wifi/nvram_mfg.txt
 etc/wifi/bcm4329_aps.bin
@@ -120,6 +128,16 @@ PRODUCT_COPY_FILES := \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so 
+
+# ppp
+    vendor/samsung/__DEVICE__/proprietary/bin/pppd:system/bin/pppd \\
+    vendor/samsung/__DEVICE__/proprietary/bin/pppd_runner:system/bin/pppd_runner \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/chap-secrets:system/etc/ppp/chap-secrets \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-down:system/etc/ppp/ip-down \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up:system/etc/ppp/ip-up \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up-vpn:system/etc/ppp/ip-up-vpn \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/options:system/etc/ppp/options \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/pap-secrets:system/etc/ppp/pap-secrets
 
 #
 # Wifi
