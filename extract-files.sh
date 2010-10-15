@@ -246,7 +246,7 @@ PRODUCT_COPY_FILES += \\
 #
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libspeech.so:system/lib/libspeech.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libspeech.so:system/lib/libspeech.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libaudio.so:system/lib/libaudio.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/lib/libwm8994.so:system/lib/libwm8994.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/lib/libsamsunglmeq.so:system/lib/libsamsunglmeq.so \\
