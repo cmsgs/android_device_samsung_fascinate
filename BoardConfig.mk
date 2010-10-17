@@ -45,8 +45,8 @@ BUILD_WITH_ALSA_UTILS := true
 
 
 # Bluetooth and wifi related defines
-BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-WPA_SUPPLICANT_VERSION := VER_0_6_X
+# BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+# WPA_SUPPLICANT_VERSION := VER_0_6_X
 #BOARD_WLAN_DEVICE := bcm4329
 WIFI_DRIVER_MODULE_PATH := "/lib/modules/dhd.ko"
 #MFGDRV_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_mfg.bin nvram_path=/system/etc/wifi/nvram_mfg.txt"
@@ -54,7 +54,7 @@ WIFI_DRIVER_MODULE_PATH := "/lib/modules/dhd.ko"
 WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=10 dhd_poll=1"
 WIFI_DRIVER_MODULE_NAME := "dhd"
 
-#BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_BLUETOOTH := true
 BT_USE_BTL_IF := true
 BT_ALT_STACK := true
@@ -63,6 +63,7 @@ BRCM_BT_USE_BTL_IF := true
 
 BOARD_EGL_CFG := device/samsung/fascinate/prebuilt/egl.cfg
 
+TARGET_PREBUILT_KERNEL := device/samsung/fascinate/kernel
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x02e00000
 
@@ -96,5 +97,3 @@ BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 #BOARD_USES_BMLUTILS := true
-
-TARGET_PREBUILT_KERNEL := device/samsung/fascinate/kernel

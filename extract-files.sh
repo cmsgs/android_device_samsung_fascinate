@@ -134,15 +134,7 @@ done
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libaudio.so:obj/lib/libaudio.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwm8994.so:obj/lib/libwm8994.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:obj/lib/libsamsunglmeq.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/liba2dp.so:obj/lib/liba2dp.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libaudiopolicy.so:obj/lib/libaudiopolicy.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libvolcustomjni.so:obj/lib/libvolcustomjni.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so
 
 # ppp
 PRODUCT_COPY_FILES += \\
@@ -246,13 +238,7 @@ PRODUCT_COPY_FILES += \\
 #
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libspeech.so:system/lib/libspeech.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libaudio.so:system/lib/libaudio.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwm8994.so:system/lib/libwm8994.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:system/lib/libsamsunglmeq.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libvolcustomjni.so:system/lib/libvolcustomjni.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libspeech.so:system/lib/libspeech.so
 
 EOF
 
