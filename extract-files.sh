@@ -144,10 +144,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:obj/lib/libseccameraadaptor.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:obj/lib/libseccamera.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwm8994.so:obj/lib/libwm8994.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:obj/lib/libsamsunglmeq.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/sensors.SCH-I500.so:obj/lib/hw/sensors.SCH-I500.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/gralloc.s5pc110.so:obj/lib/hw/gralloc.s5pc110.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/copybit.s5pc110.so:obj/lib/hw/copybit.s5pc110.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:obj/lib/libsamsunglmeq.so
 
 # vold
 PRODUCT_COPY_FILES += \\
@@ -259,8 +256,8 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libaudio.so:system/lib/libaudio.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwm8994.so:obj/lib/libwm8994.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:obj/lib/libsamsunglmeq.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libwm8994.so:system/lib/libwm8994.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:system/lib/libsamsunglmeq.so
 
 EOF
 
