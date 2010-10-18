@@ -43,17 +43,18 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 BOARD_USES_ALSA_AUDIO := true
 BUILD_WITH_ALSA_UTILS := true
 
+# WiFi related defines
 
-# Bluetooth and wifi related defines
-# BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-# WPA_SUPPLICANT_VERSION := VER_0_6_X
-#BOARD_WLAN_DEVICE := bcm4329
-WIFI_DRIVER_MODULE_PATH := "/lib/modules/dhd.ko"
+#BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+#WPA_SUPPLICANT_VERSION := VER_0_6_X
 #MFGDRV_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_mfg.bin nvram_path=/system/etc/wifi/nvram_mfg.txt"
 #DRV_AP_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_aps.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=200 dhd_poll=1"
+#BOARD_WLAN_DEVICE := bcm4329
+WIFI_DRIVER_MODULE_PATH := "/lib/modules/dhd.ko"
 WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=10 dhd_poll=1"
 WIFI_DRIVER_MODULE_NAME := "dhd"
 
+# Bluetooth related defines
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_BLUETOOTH := true
 BT_USE_BTL_IF := true
@@ -63,9 +64,16 @@ BRCM_BT_USE_BTL_IF := true
 
 BOARD_EGL_CFG := device/samsung/fascinate/prebuilt/egl.cfg
 
+# Device related defines
+
 TARGET_PREBUILT_KERNEL := device/samsung/fascinate/kernel
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x02e00000
+
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_HAS_NO_MISC_PARTITION := true
+BOARD_USES_FFORMAT := true
+BOARD_RECOVERY_IGNORE_BOOTABLES := true
 
 BOARD_BOOTIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00280000)
 BOARD_RECOVERYIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00500000)
@@ -73,11 +81,6 @@ BOARD_SYSTEMIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x07500000)
 BOARD_USERDATAIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x04ac0000)
 # The size of a block that can be marked bad.
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_USES_FFORMAT := true
-BOARD_RECOVERY_IGNORE_BOOTABLES := true
 
 BOARD_BOOT_DEVICE := /dev/block/bml7
 BOARD_DATA_DEVICE := /dev/block/mmcblk0p1
@@ -97,3 +100,4 @@ BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 #BOARD_USES_BMLUTILS := true
+#BOARD_CUSTOM_RECOVERY_KEYMAPPING := true

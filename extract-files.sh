@@ -16,6 +16,7 @@
 
 DEVICE=SCH-I500
 
+rm -rf ../../../vendor/samsung/$DEVICE
 mkdir -p ../../../vendor/samsung/$DEVICE/proprietary
 
 DIRS="
@@ -33,12 +34,13 @@ FILES="
 bin/drexe
 bin/pppd
 bin/pppd_runner
-bin/rilclient-test
 bin/rild
+bin/rilclient-test
+bin/vold
 bin/wlservice
 bin/sensorcalibutil_yamaha
-bin/sensorserver_yamaha
 bin/sensorstatutil_yamaha
+bin/sensorserver_yamaha
 
 etc/asound.conf
 etc/ppp/chap-secrets
@@ -47,6 +49,7 @@ etc/ppp/ip-up
 etc/ppp/ip-up-vpn
 etc/ppp/options
 etc/ppp/pap-secrets
+etc/vold.conf
 etc/wifi/nvram_net.txt
 etc/wifi/nvram_mfg.txt
 etc/wifi/bcm4329_aps.bin
@@ -56,17 +59,11 @@ etc/wifi/bcm4329_sta.bin
 lib/libgps.so
 lib/libsecgps.so
 lib/libril.so
+lib/libsec-ril40.so
 lib/libreference-ril.so
 lib/libsecril-client.so
 lib/libspeech.so
 lib/libwlservice.so
-
-lib/libaudio.so
-lib/libwm8994.so
-lib/libsamsunglmeq.so
-lib/liba2dp.so
-lib/libaudiopolicy.so
-lib/libvolcustomjni.so
 
 lib/libarccamera.so
 lib/libcamerafirmwarejni.so
@@ -113,7 +110,7 @@ for FILE in $FILES; do
 	adb pull system/$FILE ../../../vendor/samsung/$DEVICE/proprietary/$FILE
 done
 
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/$DEVICE/SCH-I500-vendor-blobs.mk
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -134,7 +131,12 @@ done
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so 
+
+# vold
+PRODUCT_COPY_FILES += \\
+    vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
+    vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf
 
 # ppp
 PRODUCT_COPY_FILES += \\
@@ -181,6 +183,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \\
     vendor/samsung/__DEVICE__/proprietary/bin/sensorserver_yamaha:system/bin/sensorserver_yamaha \\
     vendor/samsung/__DEVICE__/proprietary/bin/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
+
 #
 # Camera
 #
@@ -196,6 +199,7 @@ PRODUCT_COPY_FILES += \\
 #
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libril.so:system/lib/libril.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsec-ril40.so:system/lib/libsec-ril40.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/drexe:system/bin/drexe \\
@@ -234,11 +238,10 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmv8domxoc.so:system/lib/libswmv8domxoc.so
 
 #
-# other
+# TV-Out
 #
 PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libspeech.so:system/lib/libspeech.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so
 
 EOF
 
