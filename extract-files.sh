@@ -21,6 +21,7 @@ mkdir -p ../../../vendor/samsung/$DEVICE/proprietary
 
 DIRS="
 bin
+etc/ppp
 etc/wifi
 lib/egl
 lib/hw
@@ -91,7 +92,10 @@ lib/libswmadomxoc.so
 lib/libswmv7domxoc.so
 lib/libswmv8domxoc.so
 
+lib/libaudio.so
 lib/libs3cjpeg.so
+lib/libwm8994.so
+lib/libsamsunglmeq.so
 
 lib/egl/libEGL_POWERVR_SGX540_120.so
 lib/egl/libGLES_android.so
@@ -131,7 +135,19 @@ done
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so 
+    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libril.so:obj/lib/libril.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsec-ril40.so:obj/lib/libsec-ril40.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:obj/lib/libreference-ril.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libaudio.so:obj/lib/libaudio.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:obj/lib/libseccameraadaptor.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:obj/lib/libseccamera.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libwm8994.so:obj/lib/libwm8994.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:obj/lib/libsamsunglmeq.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/hw/sensors.SCH-I500.so:obj/lib/hw/sensors.SCH-I500.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/hw/gralloc.s5pc110.so:obj/lib/hw/gralloc.s5pc110.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/hw/copybit.s5pc110.so:obj/lib/hw/copybit.s5pc110.so
 
 # vold
 PRODUCT_COPY_FILES += \\
@@ -238,10 +254,13 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmv8domxoc.so:system/lib/libswmv8domxoc.so
 
 #
-# TV-Out
+# Audio
 #
 PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libaudio.so:system/lib/libaudio.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libwm8994.so:obj/lib/libwm8994.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:obj/lib/libsamsunglmeq.so
 
 EOF
 

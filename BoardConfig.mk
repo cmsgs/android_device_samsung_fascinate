@@ -96,8 +96,8 @@ BOARD_SYSTEM_FILESYSTEM_OPTIONS := llw,check=no
 BOARD_CACHE_DEVICE := /dev/block/stl11
 BOARD_CACHE_FILESYSTEM := auto
 BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
-BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
+#BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1
+#BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
+#BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 #BOARD_USES_BMLUTILS := true
 #BOARD_CUSTOM_RECOVERY_KEYMAPPING := true
