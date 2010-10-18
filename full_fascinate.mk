@@ -52,7 +52,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.startheapsize=8m \
     dalvik.vm.heapsize=48m
 
-# Epic uses high-density artwork where available
+# Fascinate uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/fascinate/overlay
@@ -71,7 +71,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
@@ -115,7 +115,7 @@ $(call inherit-product, build/target/product/full.mk)
 
 
 PRODUCT_NAME := full_fascinate
-PRODUCT_DEVICE := fascinate
+PRODUCT_DEVICE := SCH-I500
 PRODUCT_MODEL := Fascinate
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
