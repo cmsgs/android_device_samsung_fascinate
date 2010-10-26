@@ -139,7 +139,9 @@ done
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libril.so:obj/lib/libril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsec-ril40.so:obj/lib/libsec-ril40.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:obj/lib/libseccameraadaptor.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:obj/lib/libseccamera.so
@@ -198,7 +200,9 @@ PRODUCT_COPY_FILES += \\
 # RIL
 #
 PRODUCT_COPY_FILES += \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libril.so:system/lib/libril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsec-ril40.so:system/lib/libsec-ril40.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \\
     vendor/samsung/__DEVICE__/proprietary/xbin/ipctool:system/xbin/ipctool \\
     vendor/samsung/__DEVICE__/proprietary/xbin/ipcdump:system/xbin/ipcdump
 
