@@ -25,6 +25,7 @@ etc/ppp
 etc/wifi
 lib/egl
 lib/hw
+xbin
 "
 
 for DIR in $DIRS; do
@@ -108,6 +109,9 @@ lib/hw/copybit.s5pc110.so
 lib/hw/lights.default.so
 lib/hw/sensors.SCH-I500.so
 lib/hw/gralloc.s5pc110.so
+
+xbin/ipctool
+xbin/ipcdump
 "
 
 for FILE in $FILES; do
@@ -135,32 +139,15 @@ done
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libril.so:obj/lib/libril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsec-ril40.so:obj/lib/libsec-ril40.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:obj/lib/libreference-ril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libaudio.so:obj/lib/libaudio.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:obj/lib/libseccameraadaptor.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:obj/lib/libseccamera.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwm8994.so:obj/lib/libwm8994.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:obj/lib/libsamsunglmeq.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:obj/lib/libseccamera.so
 
 # vold
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
     vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf
-
-# ppp
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/bin/pppd:system/bin/pppd \\
-    vendor/samsung/__DEVICE__/proprietary/bin/pppd_runner:system/bin/pppd_runner \\
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/chap-secrets:system/etc/ppp/chap-secrets \\
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-down:system/etc/ppp/ip-down \\
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up:system/etc/ppp/ip-up \\
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up-vpn:system/etc/ppp/ip-up-vpn \\
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/options:system/etc/ppp/options \\
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/pap-secrets:system/etc/ppp/pap-secrets
 
 #
 # Wifi
@@ -211,13 +198,9 @@ PRODUCT_COPY_FILES += \\
 # RIL
 #
 PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libril.so:system/lib/libril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsec-ril40.so:system/lib/libsec-ril40.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \\
-    vendor/samsung/__DEVICE__/proprietary/bin/drexe:system/bin/drexe \\
-    vendor/samsung/__DEVICE__/proprietary/bin/rilclient-test:system/bin/rilclient-test \\
-    vendor/samsung/__DEVICE__/proprietary/bin/rild:system/bin/rild
+    vendor/samsung/__DEVICE__/proprietary/xbin/ipctool:system/xbin/ipctool \\
+    vendor/samsung/__DEVICE__/proprietary/xbin/ipcdump:system/xbin/ipcdump
 
 #
 # GPS
@@ -249,15 +232,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmadomxoc.so:system/lib/libswmadomxoc.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmv7domxoc.so:system/lib/libswmv7domxoc.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmv8domxoc.so:system/lib/libswmv8domxoc.so
-
-#
-# Audio
-#
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libaudio.so:system/lib/libaudio.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwm8994.so:system/lib/libwm8994.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsamsunglmeq.so:system/lib/libsamsunglmeq.so
 
 EOF
 
